@@ -93,14 +93,15 @@
 
                         </tfoot>
                     </table>
-                    <h6>Add Pomo Code</h6>
-                    <input type="text" aria-label="First name" class="w-auto">
-                    <button type="button" class="btn btn-danger">Apply</button>
+                    <h6 class="pt-4">Add Pomo Code</h6>
+                    <input type="text" aria-label="First name" id="promoField" class="w-auto">
+                    <button type="button" onclick="apply()" class="btn btn-danger">Apply</button>
                 </div>
             </div>
         </section>
-        <section>
-
+        <section class="container">
+            <hr>
+            <h3 class="text-center">Total $<span id="finalCost">0</span></h3>
         </section>
     </main>
 

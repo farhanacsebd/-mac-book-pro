@@ -10,6 +10,9 @@ const storageCost = document.getElementById('storageCost');
 const delivaryCost = document.getElementById('delivaryCost');
 const mainCost = document.getElementById('mainCost');
 const total = document.getElementById('total');
+const finalCost = document.getElementById('finalCost');
+let mainfinal;
+
 
 function updateData() {
     const momoryPrice = Number(memoryCost.innerText);
@@ -18,37 +21,58 @@ function updateData() {
     const delivaryPrice = Number(delivaryCost.innerText);
     const grandTotal = momoryPrice + mainPrice + storageExtraPrice + delivaryPrice;
     total.innerText = grandTotal;
+    finalCost.innerText = grandTotal;
+    mainfinal = Number(finalCost.innerText);
+}
+
+function apply() {
+    updateData();
+    const promoField = document.getElementById("promoField").value;
+    if (promoField.toLowerCase() == 'stevekaku') {
+        mainfinal = mainfinal * 0.8;
+        finalCost.innerText = mainfinal;
+    }
+
 }
 
 button1.addEventListener('click', function () {
     memoryCost.innerText = "0";
-    mainCost.innerText = "1299";
-    updateData()
+
+    updateData();
 })
 button2.addEventListener('click', function () {
     memoryCost.innerText = "180";
-    mainCost.innerText = "1299";
-    updateData()
+
+    updateData();
 })
+
 button3.addEventListener('click', function () {
     storageCost.innerText = "0";
-    mainCost.innerText = "1299";
-    updateData()
+
+    updateData();
 })
 button4.addEventListener('click', function () {
     storageCost.innerText = "100";
-    mainCost.innerText = "1299";
-    updateData()
+
+    updateData();
 })
+
 button5.addEventListener('click', function () {
     storageCost.innerText = "180";
-    updateData()
+    updateData();
 })
 button6.addEventListener('click', function () {
     delivaryCost.innerText = "0";
-    updateData()
+    updateData();
 })
 button7.addEventListener('click', function () {
     delivaryCost.innerText = "20";
-    updateData()
+    updateData();
 })
+
+
+
+
+
+
+
