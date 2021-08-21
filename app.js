@@ -12,7 +12,8 @@ const delivaryCost = document.getElementById('delivaryCost');
 const mainCost = document.getElementById('mainCost');
 const total = document.getElementById('total');
 const finalCost = document.getElementById('finalCost');
-let mainfinal;
+const promoField = document.getElementById("promoField");
+let finallyTotalCost;
 
 // update calculations
 function updateData() {
@@ -20,22 +21,22 @@ function updateData() {
     const mainPrice = Number(mainCost.innerText);
     const storageExtraPrice = Number(storageCost.innerText);
     const delivaryPrice = Number(delivaryCost.innerText);
-    const grandTotal = momoryPrice + mainPrice + storageExtraPrice + delivaryPrice;
-    total.innerText = grandTotal;
-    finalCost.innerText = grandTotal;
-    mainfinal = Number(finalCost.innerText);
+    const totalCost = momoryPrice + mainPrice + storageExtraPrice + delivaryPrice;
+    total.innerText = totalCost;
+    finalCost.innerText = totalCost;
+    finallyTotalCost = Number(finalCost.innerText);
 }
 
 
 // using onclick function for promo code
 function apply() {
     updateData();
-    const promoField = document.getElementById("promoField").value;
-    if (promoField.toLowerCase() == 'stevekaku') {
-        mainfinal = mainfinal * 0.8;
-        finalCost.innerText = mainfinal;
+    const promoFieldText = promoField.value;
+    if (promoFieldText.toLowerCase() == 'stevekaku') {
+        finallyTotalCost = finallyTotalCost * 0.8;
+        finalCost.innerText = finallyTotalCost;
     }
-
+    promoField.value = ' ';
 }
 
 
