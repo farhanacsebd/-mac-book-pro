@@ -14,30 +14,38 @@
 </head>
 
 <body>
+    <!-- main section  -->
     <main>
+        <!-- first part -->
         <section class="mb-5">
-            <h1 class="text-center my-5">MAC-BOOK-Pro</h1>
+            <h1 class="text-center my-5 fw-bold title-hover">MAC-BOOK-Pro</h1>
             <div class="container">
                 <div class="row">
+                    <!-- 6 column for image -->
                     <div class="col-md-6">
                         <img class="img-fluid pe-5" src="images/mac.png" alt="">
                     </div>
+                    <!-- 6 column for features -->
                     <div class="col-md-6">
-                        <h3>Customize your Blue 24-inch <br> iMac with Apple M1 chip.</h3>
-                        <p>Apple M1 chip with 8-core CPU with 4 performens cores and 4 efficiency cores,7-core GPU and
+                        <h3 class="title-hover">Customize your Blue 24-inch <br> iMac with Apple M1 chip.</h3>
+                        <p class="title-hover">Apple M1 chip with 8-core CPU with 4 performens cores and 4 efficiency
+                            cores,7-core GPU and
                             16-core Neural Engine 8 unified memory 256GB SSD storage Tow thundarbolt/USB 4 ports Magic
                             Mouse Magic keyboard-US English.</p>
 
                         <div>
-                            <h5 class="pb-2">Memory</h5>
+                            <!-- all the buttons start in here -->
+
+                            <h5 class="pb-2 title-hover">Memory</h5>
                             <button id="first" type="button" class="btn btn-light w-auto fw-bold dark-btn border">8GB
                                 unified
                                 memory</button>
-                            <button id="second" type="button" class="btn btn-light w-auto fw-bold dark-btn border">16GB
+                            <button id="second" type="button"
+                                class="btn btn-light w-auto fw-bold dark-btn border fw-bold">16GB
                                 unified
                                 memory</button>
 
-                            <h5 class="mt-5 pb-2">Storage</h5>
+                            <h5 class="mt-5 pb-2 title-hover fw-bold">Storage</h5>
                             <button id="third" type="button" class="btn btn-light w-auto fw-bold dark-btn border">256GB
                                 SSD
                                 storage</button>
@@ -48,7 +56,7 @@
                                 SSD
                                 storage</button>
 
-                            <h5 class="mt-5 pb-2">Choose your delivary option</h5>
+                            <h5 class="mt-5 pb-2 title-hover fw-bold">Choose your delivary option</h5>
                             <button id="sixth" type="button"
                                 class="btn btn-light w-auto fw-bold dark-btn border">Friday,Aug 25
                                 FREE
@@ -61,6 +69,7 @@
                 </div>
             </div>
         </section>
+        <!-- starting second part -->
         <section class="container mb-5">
             <div class="row">
                 <div class="col"></div>
@@ -93,20 +102,25 @@
 
                         </tfoot>
                     </table>
-                    <h6 class="pt-4">Add Pomo Code</h6>
+                    <h6 class="pt-4 title-hover fw-bold">Add Pomo Code</h6>
                     <input type="text" aria-label="First name" id="promoField" class="w-auto">
-                    <button type="button" onclick="apply()" class="btn btn-danger">Apply</button>
+
+                    <!-- here is using onclick function -->
+
+                    <button type="button" onclick="apply()" class="btn btn-danger fw-bold">Apply</button>
                 </div>
             </div>
+            <!-- end the second part -->
         </section>
+        <!-- start third section -->
         <section class="container">
             <hr>
-            <h3 class="text-center">Total $<span id="finalCost">0</span></h3>
+            <h3 class="text-center fw-bold title-hover">Total $<span id="finalCost">0</span></h3>
         </section>
+        <!-- ends the main section -->
     </main>
 
-
-
+    <!-- app javascript -->
 
     <script src="app.js"></script>
 
